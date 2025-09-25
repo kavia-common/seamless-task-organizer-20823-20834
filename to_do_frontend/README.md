@@ -1,36 +1,38 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Seamless Task Organizer – Frontend (Next.js)
 
-## Getting Started
+Modern to-do app UI built with Next.js using the "Ocean Professional" theme (blue & amber accents, subtle shadows, rounded corners, minimalist design).
 
-First, run the development server:
+## Prerequisites
+- Node.js 18+ recommended
+- Backend API running and reachable (Express service for tasks)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Configure
+1. Copy `.env.example` to `.env.local`
+2. Set the backend API base URL:
+```
+NEXT_PUBLIC_API_BASE_URL=http://localhost:4000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Develop
+```
+npm install
+npm run dev
+```
+Open http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Build
+```
+npm run build
+npm start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Features
+- List, add, edit, delete, and mark tasks as complete
+- Filters: All, Active, Completed
+- Search by title
+- Responsive layout with top navbar, input, and task list
+- Theme: Ocean Professional with smooth transitions and subtle gradients
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Notes
+- No credentials needed; only API base URL is required.
+- Ensure the backend conforms to provided OpenAPI paths under `/api/tasks`.
