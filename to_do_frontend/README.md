@@ -8,9 +8,14 @@ Modern to-do app UI built with Next.js using the "Ocean Professional" theme (blu
 
 ## Configure
 1. Copy `.env.example` to `.env.local`
-2. Set the backend API base URL:
+2. Set the backend API base URL (backend defaults to port 3001):
 ```
-NEXT_PUBLIC_API_BASE_URL=http://localhost:4000
+NEXT_PUBLIC_API_BASE_URL=http://localhost:3001
+```
+If running in a remote/sandbox environment, set it to the fully qualified backend URL accessible from the browser.
+For example:
+```
+NEXT_PUBLIC_API_BASE_URL=https://<your-hostname>:3001
 ```
 
 ## Develop
